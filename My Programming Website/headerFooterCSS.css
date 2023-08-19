@@ -1,0 +1,113 @@
+/*CSS FOR THE HEADER, FOOTER, AND MIDDLEBCKGD FOR EACH PAGE*/
+
+/*Title----------*/
+#header-background {
+    z-index:1;
+    background-color: rgb(248,248,242);/*Sandy light beige color*/
+
+    width:100vw;
+    height:10vw;
+
+    position:absolute;
+    left:-5vw;/*since body is relative for the footer position to work,*/
+    top:-5vw;/*the position has to be negative to counteract body margin*/
+}
+#header-content {
+    z-index:1;
+    position:relative;
+    bottom:1.58vw;/*offset the size of the text to be vertically centered, roughly 30px*/
+}
+#title {/*maybe put a div underneath the entire header for background?*/
+    /*background-color: rgb(0,0,0,0.1);*/
+    width:26.25vw;/*roughly 500px*/
+
+    position:absolute;
+    left:3.15vw;/*roughly 60px*/
+
+    font-size:3.15vw;/*roughly 60px*/
+}
+/*Header Links*/
+#all-header-links {/*div of all of the links together*/
+    /*background-color: rgb(0,0,0,0.1);*/
+    position:absolute;
+    right:60px;
+}
+.header-link {/*class for each individual link*/
+    background-color: rgba(237,233,230,0.75);/*pinkish beige*/
+    user-select:none;
+
+    margin:20px;
+    padding:10px;
+    border-radius:3px;
+
+    color:rgb(0,0,0);/*makes the header links black, not blue/purple*/
+    text-decoration:none;/*removes the underlines for the header links*/
+}
+.header-link:hover {
+    background-color: rgb(220,215,215);
+    cursor:pointer;
+}
+
+/*Contacts----------*/
+#footer-background {
+    background-color: rgb(248,248,242);/*Sandy light beige color*/
+    z-index:1;
+
+    width:100vw;
+    height:8vw;
+
+    position:absolute;
+    left:-5vw;/*since body is relative for the footer position to work,*/
+    bottom:-5vw;/*the position has to be negative to counteract body margin*/
+}
+#footer-title {
+    z-index:1;
+
+    margin:15px;
+
+    text-align:center;
+    font-size:1.05vw;/*roughly 20px*/
+    font-weight:bold;
+}
+.footer-info {/*the actual anchor tags for the links*/
+    z-index:1;
+
+    margin:0 5vw;
+    position:relative;
+    bottom:0.5vw;/*offset the text height to be vertically centered-ish
+                while taking the title position into account*/
+}
+.logo-link {/*class for the images inside the links*/
+    width:2.25vw;
+
+    margin:0;
+    position:relative;
+    top:1vw;/*offset the height of the logo to be vertically centered*/
+}
+
+/*Middle Background----------*/
+#UT-pic {
+    z-index:-1;
+    filter:blur(2px);
+    overflow:hidden;/*instead of having full width (which leaves white sometimes at the bottom for tall screens)
+    we use full height, but there could be extra width for tall screens, so we crop out any extra width*/
+
+    /*width:100vw;*/
+    height:100vh;
+
+    position:fixed;
+    left:0;
+    top:0;/*so it starts where the header bckgd ends*/
+    
+    margin:0;
+}
+.middle-background {
+    background-color: rgb(240, 240, 240, 0.85);
+    /*z-index:-1; negative z-index blocks buttons*/
+    clear:both;
+    padding:1vw 5vw;/*since this encompases the entire projects section,
+                    padding replaces original body margin*/
+    position:relative;
+    right:5vw;
+    width:90vw;/*need to take padding into account*/
+}
