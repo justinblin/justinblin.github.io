@@ -1,0 +1,110 @@
+.slideshow-container {/*contains everything, including the dots, to make positioning easier*/
+    width:40vw;/*may need to change this depending on the photos, this is the default*/
+
+    margin:auto;/*may need to change if its not horiz centered, this is the default - centers entire slideshow horiz in the page*/
+}
+.slides-container {/*everything but the dots (for arrow centering purposes) are included*/
+    position:relative;/*allows the arrow's absolute positioning to interact w/ the slides container, centering it vertically*/
+    color:white;/*makes all the text of the slides white*/
+}
+
+/*****IMPORTANT*****/
+/*The basic non-changing aesthetic stuff for slides and dots will be in the slidshowCSS.css external file
+Only the functional properties, like display and bckgd color will be in each html file so I don't have to type as much*/
+
+.slides {/*the div for each individual slide*/
+    width:auto;
+
+    position:relative;
+}
+.current-picture-text {/*the little number in the corner that shows which picture the current one is; ex: 1/3*/
+    background-color:rgba(0,0,0,0.3);
+    user-select:none;
+
+    width:auto;
+    height:auto;
+
+    position:absolute;
+    top:10px;
+    left:10px;
+    padding:3px;
+    margin:0;
+    border-radius:3px;
+
+    font-size:1.05vw;/*roughly 20px*/
+    line-height:normal;
+}
+.caption {/*the caption for each picture*/
+    background-color:rgba(0,0,0,0.3);
+
+    width:90%;/*accounts for the padding*/
+
+    position:absolute;/*absolute is based on the closest "positioned" ancestor (not fixed or static)*/
+    bottom:40px;
+    padding:10px 5%;
+    margin:0;
+    border-radius:3px;
+
+    text-align:center;
+    font-size:1.05vw;/*roughly 20px*/
+    line-height:normal;
+}
+
+/*vertical-center-helper was moved to the basicsCSS.css file*/
+
+.arrow-buttons {/*groups togethter the 2 arrow buttons to make it easier for the helper to move*/
+    position:relative;
+    top:-1.58vw;/*offset the height of the arrows, roughly 30px*/
+}
+.prev,.next {/*CSS for each individual arrow button*/
+    /*GENERAL*/
+    background-color: rgba(0,0,0,0.5);
+    cursor:pointer;
+    user-select:none;
+
+    /*SIZE*/
+    width:auto;
+    
+    /*SPACING - padding/margin and position*/
+    position:absolute;
+    /*top:35%;/*vertical centering, iffy for diff sizes bcs % is based on width*/
+    padding:5px 10px;
+    border-radius:3px;
+
+    /*TEXT*/
+    font-weight:bold;
+    font-size:1.05vw;/*roughly 20px*/
+}
+.next {/*moves the next button to the right*/
+    right:0;
+}
+.prev:hover, .next:hover {/*makes the arrows darker when you're about to click them*/
+    background-color: rgba(0,0,0,0.8);
+}
+.slideshow-image {/*the actual image being shown*/
+    width:100%;/*I couldn't figure out how to resize the div based on the image
+                so I'm just resizing the image based on the div*/
+
+    margin:0;
+}
+
+/*****IMPORTANT*****/
+/*The basic non-changing aesthetic stuff for slides and dots will be in the slidshowCSS.css external file
+Only the functional properties, like display and bckgd color will be in each html file so I don't have to type as much*/
+
+/*class for each dot <span>, not in the slides container so the dots expand the hitbox
+tldr: it makes the vertical cenetering of the arrow buttons easier*/
+.dots {/*the little dots on the bottom of the slideshow*/
+    /*GENERAL SIZE SPACING TEXT*/
+    cursor:pointer;
+    display:inline-block;/*still inline but you can affect width+height*/
+
+    width:0.79vw;/*roughly 15px*/
+    height:0.79vw;/*roughly 15px*/
+
+    border-radius:50%;/*makes the dot round instead of square*/
+    margin:0 5px;
+}
+/*.active, */.dots:hover {/*makes the current dot and the hovering dot darker*/
+    background-color: rgba(0,0,0,0.8);
+}

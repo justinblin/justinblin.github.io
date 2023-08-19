@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Justin Lin</title>
+        <style>
+            /*body, h1, and h2 in the headerFooterCSS.css file*/
+            
+            /*p and img in the headerFooterCSS.css file*/
+
+            /*SPACER IS EXTERNAL*/
+
+            /*HEADER IS EXTERNAL*/
+
+            /*MIDDLE BACKGROUND IS EXTERNAL*/
+
+            /*About Me----------*/
+            #picture-of-me {
+                border-radius:2px;
+
+                width:25vw;
+
+                float:left;
+            }
+            #intro {/*span saying my name and hi*/
+                font-size: 2.89vw;/*roughly 55px*/
+                font-weight:500;
+            }
+            #about-me-text {
+                background-color: rgba(255, 255, 255, 0.7);
+                border-radius:2px;
+
+                width:50vw;
+
+                float:right;
+                
+                font-size:2.63vw;/*roughly 50px*/
+                padding:1vw;
+            }
+
+            /*Projects----------*/
+
+            /*The basic non-changing aesthetic stuff for slides and dots will be in the slidshowCSS.css external file
+            Only the function properties, like display and bckgd color will be in each html file so I don't have to type as much*/
+
+            .slides-0 {/*the div for each individual slide*/
+                display:none;
+            }
+            .dots-0 {/*the little dots on the bottom of the slideshow*/
+                background-color:rgba(0,0,0,0.5);
+            }
+
+            /*FOOTER IS EXTERNAL*/
+        </style>
+        <!--BASIC CSS FOR EVERY PAGE-->
+        <link rel="stylesheet" href="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\basicsCSS.css">
+        <!--EXTERNAL CSS FOR THE HEADER AND FOOTER-->
+        <link rel="stylesheet" href="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\headerFooterCSS.css">
+        <!--MOST OF THE CSS FOR THE SLIDESHOW IS IMPORTED THROUGH THE LINK-->
+        <link rel="stylesheet" href="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\slideshowCSS.css">
+    </head>
+    <body>
+        <!--This is home page, put projects and stuff on their own page(s), maybe links in header-->
+
+        <div id="header-background">
+            <div class="vertical-center-helper">
+                <div id="header-content">
+                    <h1 id="title">Justin Lin</h1>
+                    <div id="all-header-links">
+                        <a class="header-link" href="homePage.html">Home</a>
+                        <a class="header-link" href="aboutMePage.html">About Me</a>
+                        <a class="header-link" href="projectsPage.html">Projects</a>
+                        <a class="header-link" href="#footer-background">Contacts</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+        
+        <!--Quick Intro/About Me section-->
+        <!--background picture of UT-->
+        <img id="UT-pic" src="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\websitePictures\home\UT Picture.jpg" alt="picture of UT">
+        <!--Put some pictures of me-->
+        <img id="picture-of-me" src="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\websitePictures\home\Picture of Me.jpg" alt="picture of me">
+        <p id="about-me-text"><span id="intro">Hello, my name is Justin Lin!</span><br><br>I'm currently studying CS at the University of Texas at Austin, I enjoy making fun coding projects, swimming, and baking in my free time. I'm curious about exploring more of machine learning and AI, and I'm excited to learn more about CS!</p>
+
+        <div class="middle-background">
+        <!--Quick Overview/Explanation of my things-->
+            <h2>Projects</h2>
+            <!--Slideshow of projects-->
+            <div class="slideshow-container">
+                <div class="slides-container">
+                    <div class="slides slides-0">
+                        <img class="slideshow-image" src="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\websitePictures\projects\AI Picture.jpg">
+                        <p class="current-picture-text">1/6</p>
+                        <p class="caption">Letter Recognition AI - Java</p>
+                    </div>
+                    <div class="slides slides-0">
+                        <img class="slideshow-image" src="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\websitePictures\projects\Image Processor Picture.jpg">
+                        <p class="current-picture-text">2/6</p>
+                        <p class="caption">Image Processor - Java</p>
+                    </div>
+                    <div class="slides slides-0">
+                        <img class="slideshow-image" src="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\websitePictures\projects\Wordsearch Solver Picture.jpg">
+                        <p class="current-picture-text">3/6</p>
+                        <p class="caption">Word Search Solver - Java</p>
+                    </div>
+                    <div class="slides slides-0">
+                        <img class="slideshow-image" src="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\websitePictures\projects\JS Games Picture.jpg">
+                        <p class="current-picture-text">4/6</p>
+                        <p class="caption">Java Script Minigames - JS</p>
+                    </div>
+                    <div class="slides slides-0">
+                        <img class="slideshow-image" src="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\websitePictures\projects\My Website Picture.jpg">
+                        <p class="current-picture-text">5/6</p>
+                        <p class="caption">Website of Me - HTML/CSS/JS</p>
+                    </div>
+                    <div class="slides slides-0">
+                        <img class="slideshow-image" src="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\websitePictures\projects\Unity Picture.jpg">
+                        <p class="current-picture-text">6/6</p>
+                        <p class="caption">Unity Game Development - Unity/C#</p>
+                    </div>
+        
+                    <!--forward and back arrow buttons-->
+                    <div class="vertical-center-helper">
+                        <div class="arrow-buttons">
+                            <a class="prev" onclick="slideshowZero.changeSlidesWithArrows(-1)">&#10094;</a>
+                            <a class="next" onclick="slideshowZero.changeSlidesWithArrows(1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Little Dots at the Bottom
+                    The dots have to be outside so the container hitbox doesn't include them,
+                    which makes the vertical centering of the arrows easier
+
+                    I included an external container around everything to make it easier to position-->
+                <div style="text-align:center;"><!--centers the dots horizontally-->
+                    <span class="dots dots-0" onclick="slideshowZero.showSlides(0)"></span>
+                    <span class="dots dots-0" onclick="slideshowZero.showSlides(1)"></span>
+                    <span class="dots dots-0" onclick="slideshowZero.showSlides(2)"></span>
+                    <span class="dots dots-0" onclick="slideshowZero.showSlides(3)"></span>
+                    <span class="dots dots-0" onclick="slideshowZero.showSlides(4)"></span>
+                    <span class="dots dots-0" onclick="slideshowZero.showSlides(5)"></span>
+                </div>
+            </div>
+            <!--Little description/intro to my projects-->
+            <p>I've always enjoyed exploring new things, and I started coding in elementary school by learning online, which eventually led me to enjoy creating my own personal projects throughout highschool. </p>
+            
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+        </div>
+
+        <!--FOOTER/CONTACT INFO, maybe check resume for contact stuff-->
+        <div id="footer-background">
+            <p id="footer-title">Contacts</p>
+            <div class="vertical-center-helper" style="text-align:center">
+                <!--for some reason, having line breaks for the anchor tag (<a>)
+                    sometimes counts as white space (but not for the last one),
+                    which then gets underlined and shows up as a weird bar-->
+                <a class="footer-info" href="mailto:justinblin@gmail.com"><img class="logo-link" src="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\websitePictures\footer\Gmail Logo.jpg"></a>
+                <a class="footer-info" href="https://github.com/DeepFriedChicken" target="_blank"><img class="logo-link" src="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\websitePictures\footer\GitHub Logo.jpg"></a>
+                <a class="footer-info" href="https://www.linkedin.com/in/justin-lin-63864927a/" target="_blank">
+                    <img class="logo-link" src="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\websitePictures\footer\LinkedIn Logo.jpg">
+                </a>
+            </div>
+        </div>
+
+        <!--THE JS THAT MAKES STUFF INTERACTABLE-->
+        <script src="C:\Users\justi\OneDrive\Desktop\Justin Lin\HTML things\My Programming Website\slideshowJS.js"></script>
+        <script>
+            var slideshowZero = new Slideshow(0);//makes a slideshow object (the constructor automatically makes the first slide visible on start)
+        </script>
+    </body>
+</html>
