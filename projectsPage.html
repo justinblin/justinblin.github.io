@@ -32,6 +32,28 @@
                 float:left;
             }
 
+            /*Website Project*/
+            #embedded-website {
+                display:block;/*allows the margin:auto to center the website*/
+
+                width:60vw;
+                height:30vw;
+
+                margin:auto;
+            }
+
+            /*Chrome Extension Project*/
+            .slides-1 {/*the div for each individual slide*/
+                display:none;
+            }
+            .dots-1 {/*the little dots on the bottom of the slideshow*/
+                background-color:rgba(0,0,0,0.5);
+            }
+            #extension-slideshow {
+                margin:2vw 3vw 0 0;
+                float:left;
+            }
+
             /*JS Games Project*/
             .JS-game-pictures {
                 margin:0;
@@ -103,16 +125,6 @@
             #cubey-picture {
                 width:21vw;/*about 400px*/
             }
-
-            /*Website Project*/
-            #embedded-website {
-                display:block;/*allows the margin:auto to center the website*/
-
-                width:60vw;
-                height:30vw;
-
-                margin:auto;
-            }
         </style>
         <!--BASIC CSS FOR EVERY PAGE-->
         <link rel="stylesheet" href="basicsCSS.css">
@@ -145,31 +157,7 @@
 
             <!--MY LIST OF PROJECTS-->
             <!--AI/image processing/word search solver, all of the JS minigames, my website-->
-            <h2>JavaScript Minigames</h2>
-            <!--processingjS games in my website
-                flappy bird, pong, balloon popper, jumpy game, cubey
-                PUT EACH OF THE GAMES IN THEIR OWN PAGE-->
-            <a id="flappy-bird-link" class="JS-game-links" href="flappyBird.html" target="_blank"><img id="flappy-bird-picture" class="JS-game-pictures" src="websitePictures/projects/Flappy Bird Picture.jpg"></a>
-            <a id="pong-link" class="JS-game-links" href="pong.html" target="_blank"><img id="pong-picture" class="JS-game-pictures" src="websitePictures/projects/Pong Picture.jpg"></a>
-            <a id="balloon-popper-link" class="JS-game-links" href="balloonPopper.html" target="_blank"><img id="balloon-popper-picture" class="JS-game-pictures" src="websitePictures/projects/Balloon Popper.jpg"></a>
-            <a id="jumpy-game-link" class="JS-game-links" href="jumpyGame.html" target="_blank"><img id="jumpy-game-picture" class="JS-game-pictures" src="websitePictures/projects/Jumpy Game.jpg"></a>
-            <a id="cubey-link" class="JS-game-links" href="cubey.html" target="_blank"><img id="cubey-picture" class="JS-game-pictures" src="websitePictures/projects/Cubey.jpg"></a>
-
-            <p>
-                As someone who enjoys playing video games, I've always been fascinated by the interactivity and creativity of the concept.
-                When I began learning the basics of programming and JS in elementary school, I began wondering if I could do the same.
-                <br><br>
-                By making incremental improvements on previous projects and continuing to learn through online forums and documentation,
-                I began creating my own projects, programming my own original minigames as well as recreations of other games.
-                <br><br>
-                The process of creating, learning, and improving inspired me to pursue computer science more seriously,
-                leading me to continue with more complex programming throughout high school, eventually leading to my decision to major in CS at UT.
-            </p>
-            <p style="font-size:1vw;">Click images to play</p>
-
-            <div class="spacer"></div>
-
-            <h2>Letter Recognition AI, Image Processor, and Word Search Solver</h2>
+            <h2>Letter Recognition AI, Image Processor, and Word Search Solver | 2022</h2>
             <!--slideshow of AI pics-->
             <div id="AI-slideshow" class="slideshow-container">
                 <div class="slides-container">
@@ -225,9 +213,11 @@
                 the word bank and a picture of the search grid.
             </p>
 
-            <h2>Website About Me</h2>
+            <div class="spacer"></div>
+
+            <h2>Portfolio Website | 2023</h2>
             <!--embedded my website in my website-->
-            <iframe id="embedded-website" src="index.html"></iframe>
+            <iframe id="embedded-website" src="homePage.html"></iframe>
 
             <p>
                 As I started learning more about JS, I discovered the potential of using JS in webpages and began learning the basics of HTML/CSS from Khan Academy.
@@ -236,6 +226,83 @@
                 so I decided to dive deeper and learn more about HTML and CSS to create a website from scratch. While learning about the more complex elements
                 of HTML/CSS and web design was challenging, I found the experience of learning, testing, and tinkering to be a rewarding process.
             </p>
+
+            <div class="spacer"></div>
+
+            <h2>Pomodoro Timer Chrome Extension | 2023</h2>
+            <div id="extension-slideshow" class="slideshow-container">
+                <div class="slides-container">
+                    <div class="slides slides-1">
+                        <img class="slideshow-image" src="websitePictures/projects/Extension page.jpg">
+                        <p class="current-picture-text">1/4</p>
+                    </div>
+                    <div class="slides slides-1">
+                        <img class="slideshow-image" src="websitePictures/projects/Extension title.jpg">
+                        <p class="current-picture-text">2/4</p>
+                    </div>
+                    <div class="slides slides-1">
+                        <img class="slideshow-image" src="websitePictures/projects/Extension timer.jpg">
+                        <p class="current-picture-text">3/4</p>
+                    </div>
+                    <div class="slides slides-1">
+                        <img class="slideshow-image" src="websitePictures/projects/Extension code.jpg">
+                        <p class="current-picture-text">4/4</p>
+                    </div>
+
+                    <!--forward and back arrow buttons-->
+                    <div class="vertical-center-helper">
+                        <div class="arrow-buttons">
+                            <a class="prev" onclick="slideshowOne.changeSlidesWithArrows(-1)">&#10094;</a>
+                            <a class="next" onclick="slideshowOne.changeSlidesWithArrows(1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Little Dots at the Bottom
+                The dots have to be outside so the container hitbox doesn't include them,
+                which makes the vertical centering of the arrows easier
+
+                I included an external container around everything to make it easier to position-->
+                <div style="text-align:center;"><!--centers the dots horizontally-->
+                    <span class="dots dots-1" onclick="slideshowOne.showSlides(0)"></span>
+                    <span class="dots dots-1" onclick="slideshowOne.showSlides(1)"></span>
+                    <span class="dots dots-1" onclick="slideshowOne.showSlides(2)"></span>
+                    <span class="dots dots-1" onclick="slideshowOne.showSlides(3)"></span>
+                </div>
+            </div>
+            <p>
+                By creating my portfolio website, I learned many new concepts and applications of HTML/CSS/JS and started feeling more confident in the language.
+                After my brother suggested making a pomodoro timer, a productivity tool that alternates between work and rest time to help users focus,
+                I became interested in making a Chrome Extension since it also used HTML/CSS/JS.<br><br>While creating the front-end of the extension wasn't too hard
+                due to my previous experience making the portfolio website, I quickly discovered the challenges in learning the intricacies of extension service workers,
+                content scripts, and the Chrome API, especially due to the difficulty of finding up-to-date information online with the update to Manifest V3.
+                However, by browsing online forums and reading through the Chrome API documentation, I managed to piece together my Pomodoro Chrome Extension,
+                learning many new things about Chrome Extensions and back-end programming in the process.
+            </p>
+
+            <div class="spacer"></div>
+
+            <h2>JavaScript Minigames | 2017-2019</h2>
+            <!--processingjS games in my website
+                flappy bird, pong, balloon popper, jumpy game, cubey
+                PUT EACH OF THE GAMES IN THEIR OWN PAGE-->
+            <a id="flappy-bird-link" class="JS-game-links" href="flappyBird.html" target="_blank"><img id="flappy-bird-picture" class="JS-game-pictures" src="websitePictures/projects/Flappy Bird Picture.jpg"></a>
+            <a id="pong-link" class="JS-game-links" href="pong.html" target="_blank"><img id="pong-picture" class="JS-game-pictures" src="websitePictures/projects/Pong Picture.jpg"></a>
+            <a id="balloon-popper-link" class="JS-game-links" href="balloonPopper.html" target="_blank"><img id="balloon-popper-picture" class="JS-game-pictures" src="websitePictures/projects/Balloon Popper.jpg"></a>
+            <a id="jumpy-game-link" class="JS-game-links" href="jumpyGame.html" target="_blank"><img id="jumpy-game-picture" class="JS-game-pictures" src="websitePictures/projects/Jumpy Game.jpg"></a>
+            <a id="cubey-link" class="JS-game-links" href="cubey.html" target="_blank"><img id="cubey-picture" class="JS-game-pictures" src="websitePictures/projects/Cubey.jpg"></a>
+
+            <p>
+                As someone who enjoys playing video games, I've always been fascinated by the interactivity and creativity of the concept.
+                When I began learning the basics of programming and JS in elementary school, I began wondering if I could do the same.
+                <br><br>
+                By making incremental improvements on previous projects and continuing to learn through online forums and documentation,
+                I began creating my own projects in middle school, programming my own original minigames as well as recreations of other games.
+                <br><br>
+                The process of creating, learning, and improving inspired me to pursue computer science more seriously,
+                allowing me to continue with more complex programming, eventually leading to my decision to major in CS at UT.
+            </p>
+            <p style="font-size:1vw;">Click images to play</p>            
 
             <div class="spacer"></div>
         </div>
@@ -260,6 +327,7 @@
         <script>
             //instantiates the one slideshow for this page
             var slideshowZero = new Slideshow(0);
+            var slideshowOne = new Slideshow(1);
         </script>
     </body>
 </html>
