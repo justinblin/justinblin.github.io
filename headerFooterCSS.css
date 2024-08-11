@@ -32,7 +32,7 @@
     position:absolute;
     right:60px;
 }
-.header-link {/*class for each individual link*/
+.header-link, .github-project-link {/*class for each individual link*/
     background-color: rgba(237,233,230,0.75);/*pinkish beige*/
     user-select:none;
 
@@ -42,6 +42,9 @@
 
     color:rgb(0,0,0);/*makes the header links black, not blue/purple*/
     text-decoration:none;/*removes the underlines for the header links*/
+}
+.github-project-link { /*changing the background so it pops out better*/
+    background-color: rgb(248,248,242);
 }
 .header-link:hover {
     background-color: rgb(220,215,215);
